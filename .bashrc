@@ -11,6 +11,8 @@ export PERL5LIB=$HOME/extlib/lib/perl5:$PERL5LIB
 
 source ~/perl5/perlbrew/etc/bashrc
 
+git config --global core.excludesfile ~/.gitignore
+
 # http://ethanschoonover.com/solarized
 alias ls='gls --color=auto'
 eval $(gdircolors ~/dircolors-solarized/dircolors.ansi-universal)

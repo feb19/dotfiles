@@ -266,7 +266,3 @@ if has('gui')
     nmap gp "+p
     nmap gP "+P
 endif
-
-
-
-
