@@ -1,9 +1,9 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
+export PATH=$PATH:$HOME/.nodebrew/current/bin
 export PATH=$PATH:/Applications/Adobe\ Flash\ Builder\ 4.6/sdks/4.6.0/bin
 export PATH=$PATH:$HOME/Android\ SDK/platform-tools
-export PATH=$PATH:$HOME/extlib/bin:$HOME/.nodebrew/current/bin:/usr/local/bin
+export PATH=$PATH:$HOME/extlib/bin:/usr/local/bin
 export PATH=$PATH:/usr/local/opt/coreutils/libexec/gnubin
 
 export PERL_CPANM_OPT="-l $HOME/extlib"

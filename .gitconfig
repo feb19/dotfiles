@@ -1,0 +1,24 @@
+[user]
+	name = Nobuhiro Takahashi
+	email = nt@feb19.jp
+[core]
+	quotepath = false
+	excludesfile = /Users/feb19/.gitignore
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	grep = auto
+[push]
+	default = current
+[alias]
+	st = status
+	co = checkout
+	ci = commit -v
+	di = diff
+	br = branch
+	puhs = push
+	psuh = push
+	pus = push
+	puh = push
+	pl = !git pull && git submodule update --init
