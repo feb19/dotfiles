@@ -1,17 +1,20 @@
 
 #!/bin/bash
  
-files=.*
+files=*
  
 for file in ${files}
 do
-   filepath="${PWD}/${file}"
-   homefile="${HOME}/${file}"
+  filepath="${PWD}/${file}"
+  homefile="${HOME}/${file}"
  
   # . と .. .git は抜かす
   test $file == ".git" && continue
   test $file == "." && continue
   test $file == ".." && continue
+  test $file == "make_ln" && continue
+  test $file == "README.md" && continue
+  test $file == "Brewfile" && continue
  
   # .hogehogeが存在しなければ、シンボリックリンクを作成
   if [ ! -e "${homefile}" ]; then

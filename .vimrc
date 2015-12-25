@@ -1,5 +1,5 @@
 
-set rtp+=~/.vim/vundle.git/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 set nocompatible
 filetype off
@@ -7,7 +7,9 @@ filetype off
 " ========== Neo Bundle 設定 ==========
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim
-    call neobundle#rc(expand('~/.vim/bundle'))
+    call neobundle#begin(expand('~/.vim/bundle'))
+    NeoBundleFetch 'Shougo/neobundle.vim'
+    call neobundle#end()
 endif
 
 " ここにインストールしたいプラグインのリストを書く
@@ -17,12 +19,16 @@ NeoBundle 'Align'
 
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+
+" ファイルをtree表示してくれる
+NeoBundle 'scrooloose/nerdtree'
 
 filetype plugin on
 filetype indent on
 
-Bundle 'JavaScript-syntax'
-Bundle 'pangloss/vim-javascript'
+"Bundle 'JavaScript-syntax'
+"Bundle 'pangloss/vim-javascript'
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -154,8 +160,8 @@ set showmatch
 " 行頭の余白内で Tab を打ち込むと shiftwidth の数だけインデント
 set smarttab
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set softtabstop=0
 "set noexpandtab
 set expandtab
@@ -241,6 +247,9 @@ syntax on
 filetype plugin on
 filetype indent on
 
+"set background=dark
+"colorscheme solarized
+
 
 " ========== GUI ==========
 "ワイルドメニューを使う
@@ -265,4 +274,5 @@ if has('gui')
     nmap gy "+y
     nmap gp "+p
     nmap gP "+P
+    
 endif

@@ -3,7 +3,7 @@
 	email = nt@feb19.jp
 [core]
 	quotepath = false
-	excludesfile = /Users/feb19/.gitignore
+	excludesfile = /Users/takahashi.nobuhiro/.gitignore
 [color]
 	diff = auto
 	status = auto
@@ -22,3 +22,5 @@
 	pus = push
 	puh = push
 	pl = !git pull && git submodule update --init
+[http]
+	postBuffer = 2M

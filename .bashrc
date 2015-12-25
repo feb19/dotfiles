@@ -1,3 +1,5 @@
+export PATH=$PATH:/usr/local/opt
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH=$PATH:$HOME/.nodebrew/current/bin
@@ -29,3 +31,11 @@ man() {
         LESS_TERMCAP_us=$(printf "\e[1;32m") \
         man "$@"
 }
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
+echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
+echo 'eval (direnv hook fish)' >> ~/.config/fish/config.fish
+echo 'eval `direnv hook tcsh`' >> ~/.cshrc
+eval "$(direnv hook bash)"
+eval "$(direnv hook bash)"
