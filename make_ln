@@ -1,10 +1,10 @@
-
 #!/bin/bash
  
 files=*
  
 for file in ${files}
 do
+  echo "${file}"
   filepath="${PWD}/${file}"
   homefile="${HOME}/${file}"
  
@@ -18,9 +18,9 @@ do
  
   # .hogehogeが存在しなければ、シンボリックリンクを作成
   if [ ! -e "${homefile}" ]; then
-     echo "${file} not exis, make symbolic link to ${homefile}"
-     ln -s "${filepath}" "${homefile}"
+    echo "${file} not exis, make symbolic link to ${homefile}"
+    ln -s "${filepath}" "${homefile}"
   else
-     echo "${file} exist"
+    echo "${file} exist"
   fi
 done
