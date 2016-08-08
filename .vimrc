@@ -1,6 +1,6 @@
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
 set nocompatible
 filetype off
 
@@ -13,6 +13,7 @@ if has('vim_starting')
 endif
 
 " ここにインストールしたいプラグインのリストを書く
+call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'Align'
@@ -23,6 +24,8 @@ NeoBundle 'Shougo/neosnippet-snippets'
 
 " ファイルをtree表示してくれる
 NeoBundle 'scrooloose/nerdtree'
+call neobundle#end()
+
 
 filetype plugin on
 filetype indent on
@@ -71,8 +74,6 @@ highlight PmenuSel ctermbg=1 guifg=#dddd00 guibg=#1f82cd
 highlight PmenuSbar ctermbg=0 guibg=#d6d6d6
 
 
-
-NeoBundle 'git://github.com/jsx/jsx.vim.git'
 
 if !exists("g:neocomplcache_force_omni_patterns")
     let g:neocomplcache_force_omni_patterns = {}

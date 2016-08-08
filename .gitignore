@@ -15,4 +15,5 @@ db/*.sqlite3-journal
 log/*.log
 tmp
 
-
+.vim/bundle/neobundle.vim
+.vim/.netrwhist

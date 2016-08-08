@@ -1,8 +1,8 @@
 #!/bin/bash
  
-files=*
+#files=*
  
-for file in ${files}
+for file in .??*
 do
   echo "${file}"
   filepath="${PWD}/${file}"
@@ -16,11 +16,12 @@ do
   test $file == "README.md" && continue
   test $file == "Brewfile" && continue
  
+  echo "${homefile}"
   # .hogehogeが存在しなければ、シンボリックリンクを作成
   if [ ! -e "${homefile}" ]; then
-    echo "${file} not exis, make symbolic link to ${homefile}"
+    echo "${file} not exists, make symbolic link to ${homefile}"
     ln -s "${filepath}" "${homefile}"
   else
-    echo "${file} exist"
+    echo "${file} exists"
   fi
 done
