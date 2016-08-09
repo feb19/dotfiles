@@ -19,8 +19,8 @@ export PERL5LIB=$HOME/extlib/lib/perl5:$PERL5LIB
 git config --global core.excludesfile ~/.gitignore
 
 # http://ethanschoonover.com/solarized
-alias ls='gls --color=auto'
-eval $(gdircolors ~/dircolors-solarized/dircolors.ansi-universal)
+alias ls='ls --color=auto'
+# eval $(gdircolors ~/dircolors-solarized/dircolors.ansi-universal)
 
 export MANPAGER='less -R'
 man() {
@@ -35,10 +35,8 @@ man() {
         man "$@"
 }
 
-echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
-echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
-echo 'eval (direnv hook fish)' >> ~/.config/fish/config.fish
-echo 'eval `direnv hook tcsh`' >> ~/.cshrc
-eval "$(direnv hook bash)"
-eval "$(direnv hook bash)"
-eval "$(direnv hook bash)"
+# echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
+# echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
+# echo 'eval (direnv hook fish)' >> ~/.config/fish/config.fish
+# echo 'eval `direnv hook tcsh`' >> ~/.cshrc
+# eval "$(direnv hook bash)"
