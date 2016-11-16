@@ -3,7 +3,7 @@
 	email = nt@feb19.jp
 [core]
 	quotepath = false
-	excludesfile = /home/feb19/.gitignore
+	excludesfile = /Users/feb19/.gitignore
 [color]
 	diff = auto
 	status = auto

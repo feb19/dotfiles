@@ -9,3 +9,6 @@ vim
 ```
 :NeoBundleInstall
 ```
+
+- [Ruby とかの設定](http://snippets.feb19.jp/?p=885)
+- [Markdown を Quicklook](https://github.com/toland/qlmarkdown)

@@ -19,7 +19,11 @@ export PERL5LIB=$HOME/extlib/lib/perl5:$PERL5LIB
 git config --global core.excludesfile ~/.gitignore
 
 # http://ethanschoonover.com/solarized
-alias ls='ls --color=auto'
+# linux の場合はこちら
+#alias ls='ls --color=auto'
+# mac の場合はこちら
+alias ls='ls -G'
+
 # eval $(gdircolors ~/dircolors-solarized/dircolors.ansi-universal)
 
 export MANPAGER='less -R'
